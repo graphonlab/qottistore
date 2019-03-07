@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600&subset=cyrillic');
 /*!
 Theme Name: qotti
 Theme URI: http://qottistore.com
@@ -66,8 +67,45 @@ html {
  * Remove the margin in all browsers.
  */
 /*ADDED STYLES padding,width, @media screen*/
- body {
-	 background: #fafafa;
+
+.site-header {
+	background: #12233c;
+}
+
+.site-title, .site-description {
+	padding-left: 2em;
+	padding-right: 2em;
+	margin: 0;
+}
+
+.site-title {
+	margin-top: 0.333em;
+}
+
+.site-title a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.777em;
+	font-weight: 300;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	color: #b6bfc9;
+}
+.site-title a:visited {
+	color: #b6bfc9;
+	font-family: 'Roboto', sans-serif;
+}
+
+.site-description {
+	font-size: 1em;
+	font-weight: 400;
+	color: #a0a7b1;
+}
+
+.site-content {
+	background: white;
+}
+
+.site-header, .site-content {
  	 width: 100%;
    padding-right: 15px;
    padding-left: 15px;
@@ -76,13 +114,13 @@ html {
  }
 
  @media screen and (min-width: 1100px) {
-   body {
-     width: 100%;
-     padding-right: 15%;
- 		padding-left: 15%;
- 		margin-right: auto;
- 	  margin-left: auto;
-   }
+	 .site-header, .site-content {
+	  	 width: 100%;
+	    padding-right: 10%;
+	    padding-left: 10%;
+	    margin-right: auto;
+	    margin-left: auto;
+	  }
  }
 
 /**
@@ -650,19 +688,18 @@ a:hover, a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
+	float: right;
+	padding-right: 1em;
+	padding-left: 1em;
 
 }
 /*ADDED STYLES padding*/
 .main-navigation a {
 	padding-left: 1em;
+	padding-right: 1em;
 	padding-bottom: 0.333em;
 	padding-top: 0.333em;
-	padding-right: 1em;
-  background-color: #fff;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-	*border-bottom: 2px solid transparent;
+	border-bottom: 2px solid transparent;
 
   transition-duration: .1s;
   transition-timing-function: linear;
@@ -670,8 +707,8 @@ a:hover, a:active {
 
 /*ADDED STYLES padding*/
 .main-navigation a:hover {
-	*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	*border-bottom: 2px solid #f1f;
+	border-bottom: 2px solid #f1f;
+	background: #cccccc;
 }
 
 .main-navigation ul {
@@ -702,7 +739,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-	width: 280px;
+	width: 200px;
 
 	/*ADDED STYLES padding*/
 	padding-left: 1em;
@@ -744,7 +781,7 @@ a:hover, a:active {
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-	margin: 0 0 1.5em;
+	margin: 0; /* default margin: 0 0 1.5em;*/
 	overflow: hidden;
 }
 
